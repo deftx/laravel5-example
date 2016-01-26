@@ -12,7 +12,7 @@ return [
     | services your application utilizes. Set this in your ".env" file.
     |
     */
-   
+
     'env' => env('APP_ENV', 'production'),
 
 	/*
@@ -66,7 +66,7 @@ return [
 	*/
 
 	'locale' => 'en',
-	
+
 	/*
 	|--------------------------------------------------------------------------
 	| Application available Languages
@@ -78,7 +78,7 @@ return [
 	! and at least, add the ISO code in languages array.
 	*/
 
-	'languages' => ['en', 'fr', 'pt-BR'],	
+	'languages' => ['en', 'fr', 'pt-BR'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -121,7 +121,7 @@ return [
 	|
 	*/
 
-	'log' => 'single',
+	'log' => env('APP_LOG', 'single'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -150,10 +150,10 @@ return [
         Illuminate\Filesystem\FilesystemServiceProvider::class,
         Illuminate\Foundation\Providers\FoundationServiceProvider::class,
         Illuminate\Hashing\HashServiceProvider::class,
-        Illuminate\Mail\MailServiceProvider::class,
+        Shpasser\GaeSupportL5\Mail\MailServiceProvider::class,
         Illuminate\Pagination\PaginationServiceProvider::class,
         Illuminate\Pipeline\PipelineServiceProvider::class,
-        Illuminate\Queue\QueueServiceProvider::class,
+        Shpasser\GaeSupportL5\Queue\QueueServiceProvider::class,
         Illuminate\Redis\RedisServiceProvider::class,
         Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
         Illuminate\Session\SessionServiceProvider::class,
@@ -170,7 +170,7 @@ return [
 		App\Providers\RouteServiceProvider::class,
 		App\Services\Html\HtmlServiceProvider::class,
 		Bestmomo\Filemanager\FilemanagerServiceProvider::class,
-
+        Shpasser\GaeSupportL5\GaeSupportServiceProvider::class,
 	],
 
 	/*

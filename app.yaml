@@ -1,0 +1,28 @@
+application: kalvin-test-project
+version: one
+runtime: php55
+api_version: 1
+
+handlers:
+
+- url: /favicon\.ico
+  static_files: public/favicon.ico
+  upload: public/favicon\.ico
+- url: /css/(.*\.css$)
+  static_files: public/css/\1
+  upload: public/css/(.*\.css$)
+  application_readable: true
+- url: /js/(.*\.js$)
+  static_files: public/js/\1
+  upload: public/js/(.*\.js$)
+  application_readable: true
+- url: /img
+  static_dir: public/img
+- url: /fonts/(.*$)
+  static_files: public/fonts/\1
+  upload: public/fonts/(.*)
+  application_readable: true
+
+- url: /.*
+  script: public/index.php
+
